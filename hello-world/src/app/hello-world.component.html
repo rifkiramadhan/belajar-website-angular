@@ -1,0 +1,19 @@
+<img [src]="nama_gambar" width="400" alt="Gambar Angular" />
+<h2>{{ judul.toUpperCase() }}</h2>
+<p>Component Angular pertamamu</p>
+<p>{{ count }}</p>
+
+<div *ngIf="active; else noEdit">
+    <p [contentEditable]="active">Kamu bisa edit text berikut ini.</p>
+</div>
+<ng-template #noEdit>
+    <p>Text berikut hanya bisa dibaca. Coba tekan tombolnya!</p>
+</ng-template>
+
+<button (click)="onEditClick()">Edit</button>
+<button (click)="increment()">+</button>
+<p>
+    <button (click)="hello('angular')">Angular</button>
+    <button (click)="hello('vuejs')">Vuejs</button>
+    <button (click)="hello('react')">React</button>
+</p>
